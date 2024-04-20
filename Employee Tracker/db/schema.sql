@@ -1,4 +1,5 @@
 -- schema.sql
+DROP DATABASE IF EXISTS department;
 
 -- Create department table
 CREATE TABLE department (
