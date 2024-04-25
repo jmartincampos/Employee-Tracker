@@ -1,14 +1,6 @@
 // queries.js
 const mysql = require('mysql2');
-const connect = require('./db');
-
-// Create connection pool
-const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    database: 'employee_tracker',
-    password: 'password' // Replace with your MySQL password
-});
+const pool = require('./db');
 
 // View all departments
 function viewAllDepartments() {
@@ -42,12 +34,52 @@ function addDepartment(departmentName) {
     });
 }
 
-// Other query functions (addRole, addEmployee, updateEmployeeRole, etc.)
+// Update employee manager
+function updateEmployeeManager(employeeId, newManagerId) {
+    // Implement the query to update the employee's manager
+}
 
+// View employees by manager
+function viewEmployeesByManager(managerId) {
+    // Implement the query to view employees by manager
+}
+
+// View employees by department
+function viewEmployeesByDepartment(departmentId) {
+    // Implement the query to view employees by department
+}
+
+// Delete department
+function deleteDepartment(departmentId) {
+    // Implement the query to delete a department
+}
+
+// Delete role
+function deleteRole(roleId) {
+    // Implement the query to delete a role
+}
+
+// Delete employee
+function deleteEmployee(employeeId) {
+    // Implement the query to delete an employee
+}
+
+// View total utilized budget of a department
+function viewDepartmentBudget(departmentId) {
+    // Implement the query to calculate the total utilized budget of a department
+}
+
+// Export all functions
 module.exports = {
     viewAllDepartments,
     viewAllRoles,
     viewAllEmployees,
-    addDepartment
-    // Add other functions as needed
+    addDepartment,
+    updateEmployeeManager,
+    viewEmployeesByManager,
+    viewEmployeesByDepartment,
+    deleteDepartment,
+    deleteRole,
+    deleteEmployee,
+    viewDepartmentBudget
 };
